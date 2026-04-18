@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Lustosa Chavier | Desenvolvedor Front-End</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── HEADER / NAV ────────────────────────────────────── -->
+  <header>
+    <nav class="container">
+      <a href="#inicio" class="nav-logo">David<span>.</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato" class="btn btn-primary" style="padding:8px 20px">Contato</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Mobile drawer -->
+  <nav class="nav-drawer" id="nav-drawer">
+    <a href="#inicio"   onclick="closeMenu()">Início</a>
+    <a href="#sobre"    onclick="closeMenu()">Sobre</a>
+    <a href="#projetos" onclick="closeMenu()">Projetos</a>
+    <a href="#contato"  onclick="closeMenu()">Contato</a>
+  </nav>
+
+  <!-- ── HERO ────────────────────────────────────────────── -->
+  <section id="inicio">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-badge">Disponível para projetos</div>
+          <h1 class="hero-name">
+            David Lustosa<br><span class="accent">Chavier</span>
+          </h1>
+          <p class="hero-title">Desenvolvedor Front-End</p>
+          <p class="hero-desc">
+            Transformo ideias em interfaces bonitas, acessíveis e performáticas.
+            Apaixonado por código limpo, UX cuidadosa e soluções que fazem diferença.
+          </p>
+          <div class="hero-ctas">
+            <a href="#projetos" class="btn btn-primary">Ver Projetos →</a>
+            <a href="#sobre"    class="btn btn-outline">Sobre Mim</a>
+          </div>
+        </div>
+        <div class="hero-avatar" aria-label="Avatar">👨‍💻</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SOBRE ────────────────────────────────────────────── -->
+  <section id="sobre">
+    <div class="container">
+      <h2 class="section-title">Sobre Mim</h2>
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <p>
+            Olá! Sou David, desenvolvedor front-end com foco em criar experiências
+            digitais modernas e intuitivas. Minha jornada começou com curiosidade sobre
+            como os sites funcionavam por dentro — e desde então nunca parei de aprender.
+          </p>
+          <p>
+            Trabalho com HTML, CSS e JavaScript no dia a dia, sempre buscando escrever
+            código limpo, semântico e acessível. Tenho interesse crescente em frameworks
+            modernos e boas práticas de performance web.
+          </p>
+          <p>
+            Quando não estou codando, você me encontra estudando UI/UX, contribuindo com
+            projetos open-source ou explorando novas ferramentas do ecossistema web.
+          </p>
+          <div class="stats-row">
+            <div class="stat"><div class="stat-num">3+</div><div class="stat-label">Anos estudando</div></div>
+            <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Projetos</div></div>
+            <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Tecnologias</div></div>
+          </div>
+        </div>
+        <div class="skills-side">
+          <p class="skills-title">Habilidades &amp; Tecnologias</p>
+          <div class="skills-grid" id="skills-grid">
+            <!-- renderizado via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJETOS ─────────────────────────────────────────── -->
+  <section id="projetos">
+    <div class="container">
+      <h2 class="section-title">Projetos</h2>
+      <div id="projetos-grid">
+        <!-- cards renderizados via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTATO ──────────────────────────────────────────── -->
+  <section id="contato">
+    <div class="container">
+      <h2 class="section-title">Contato</h2>
+      <div class="contato-grid">
+
+        <!-- Informações de contato -->
+        <div class="contato-info">
+          <p class="contato-info-title">Vamos conversar?</p>
+          <p class="contato-info-desc">
+            Estou aberto a novas oportunidades, freelas e colaborações.
+            Me envie uma mensagem — responderei o quanto antes.
+          </p>
+
+          <a href="mailto:davidlustosa34@gmail.com" class="contato-item">
+            <div class="contato-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M2 7l10 7 10-7"/>
+              </svg>
+            </div>
+            davidlustosa34@gmail.com
+          </a>
+
+          <a href="https://github.com/" target="_blank" rel="noopener" class="contato-item">
+            <div class="contato-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+                0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+                -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+                -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0
+                012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595
+                1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012
+                2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+            </div>
+            github.com/davidlustosa
+          </a>
+
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contato-item">
+            <div class="contato-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </div>
+            linkedin.com/in/davidlustosa
+          </a>
+        </div>
+
+        <!-- Formulário -->
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="seu@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Sobre o que quer falar?" required />
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          </div>
+          <div class="form-feedback" id="form-feedback">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            Mensagem enviada com sucesso! Responderei em breve.
+          </div>
+          <button type="submit" class="btn btn-primary btn-submit" id="btn-submit">
+            Enviar Mensagem →
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ───────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">David<span>.</span></div>
+        <div class="social-links">
+          <!-- GitHub -->
+          <a href="https://github.com/" target="_blank" rel="noopener" class="social-link" title="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
+              0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466
+              -.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+              .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688
+              -.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0
+              012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595
+              1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012
+              2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:davidlustosa34@gmail.com" class="social-link" title="Email">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M2 7l10 7 10-7"/>
+            </svg>
+          </a>
+        </div>
+        <p class="footer-copy">© <span id="year"></span> David Lustosa Chavier. Feito com ❤️ e JavaScript puro.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
